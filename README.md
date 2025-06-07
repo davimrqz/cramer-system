@@ -48,7 +48,7 @@ z = 0.78125
 
 ## 📁 Arquivo principal
 
-- `sistema_cramer.py`
+- `cramer-system.py`
 
 ## 👨‍💻 Equipe
 
