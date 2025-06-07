@@ -1,5 +1,5 @@
 # cramer-system
-a matrix system in python.
+A matrix system in Python.
 
 # Sistema Linear 3x3 com Regra de Sarrus e Cramer
 
@@ -23,3 +23,41 @@ Depois, calcula:
 Execute o programa e digite os valores quando solicitado.
 
 ### Exemplo de entrada:
+```
+Linha 1 (separe os 3 números com espaço): 2 -1 3  
+Linha 2 (separe os 3 números com espaço): 1 0 4  
+Linha 3 (separe os 3 números com espaço): 5 2 -2  
+
+Termo 1: 7  
+Termo 2: 4  
+Termo 3: 3
+```
+
+### Saída esperada:
+```
+Solução do sistema:
+x = 1.625  
+y = -1.96875  
+z = 0.78125
+```
+
+## 🧠 Fundamentos matemáticos usados
+
+- **Regra de Sarrus**: cálculo de determinantes 3x3.
+- **Regra de Cramer**: resolução de sistemas lineares com matriz invertível.
+
+## 📁 Arquivo principal
+
+- `sistema_cramer.py`
+
+## 👨‍💻 Equipe
+
+- Davi Marques  
+- Luan Rocha  
+- Gabriel Rodrigues  
+- Gabriel Campos  
+- Renan Oliveira
+
+---
+
+Projeto desenvolvido para a disciplina de **Matemática Computacional** – Engenharia de Software – UniAteneu.
