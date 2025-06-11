@@ -6,6 +6,7 @@ def sarrus(mat):
     det = (a*e*i + b*f*g + c*d*h) - (c*e*g + b*d*i + a*f*h)
     return det
 
+
 def substituir_coluna(matriz, coluna_substituir, nova_coluna):
     """Substitui uma coluna de uma matriz por uma nova coluna"""
     nova_matriz = []
@@ -15,12 +16,13 @@ def substituir_coluna(matriz, coluna_substituir, nova_coluna):
         nova_matriz.append(nova_linha)
     return nova_matriz
 
+
 def resolver_sistema_cramer(matriz, termos):
     """Resolve um sistema 3x3 usando a Regra de Cramer"""
     det_principal = sarrus(matriz)
 
     if det_principal == 0:
-        return None, "Sistema impossível ou indeterminado (det = 0)"
+        return None, "Sistema impossível ou indeterminado (det = 0)"  # ← se o sistema não tiver solução única
 
     matriz_x = substituir_coluna(matriz, 0, termos)
     matriz_y = substituir_coluna(matriz, 1, termos)
@@ -30,15 +32,16 @@ def resolver_sistema_cramer(matriz, termos):
     det_y = sarrus(matriz_y)
     det_z = sarrus(matriz_z)
 
-    x = det_x / det_principal
+    x = det_x / det_principal  # ← x pode ser 0.0, sem problema
     y = det_y / det_principal
     z = det_z / det_principal
 
     return (x, y, z), None
 
+
 if __name__ == "__main__":
     print("=== Resolução de sistema 3x3 pela Regra de Cramer ===")
-    
+
     matriz = []
     termos = []
 
